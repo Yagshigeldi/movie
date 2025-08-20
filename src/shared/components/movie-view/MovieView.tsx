@@ -21,6 +21,7 @@ const MovieView:FC<Props> = ({data}) => {
                         <div className='p-3'>
                             <h3 className='font-bold text-xl line-clamp-1' title={movie.title}>{movie.title}</h3>
                             <p>⭐️{movie.vote_average}</p>
+                            <p>{movie.release_date}</p>
                         </div>
                     </div>
             ))}

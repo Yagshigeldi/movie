@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useMovieDetail } from './services/useMovieDetail';
 import { DEFAULT_IMAGE, IMAGE_URL } from '../../shared/const';
 import MovieView from '../../shared/components/movie-view/MovieView';
+import { Image } from 'antd';
 
 const MovieDetail = () => {
   const {id} = useParams()
@@ -35,7 +36,8 @@ const MovieDetail = () => {
       <div className='flex flex-wrap'>
         {
           imagesData?.backdrops?.slice(0, 20)?.map((item: any, inx: number) =>(
-            <img key={inx} src={IMAGE_URL + item.file_path} width={180} alt="" />
+            // <img loading='lazy' key={inx} src={IMAGE_URL + item.file_path} width={180} alt="" />
+            <Image loading='lazy' key={inx} src={IMAGE_URL + item.file_path} width={180} alt=""/>
           ))}
       </div>
       <div className='flex flex-wrap'>
