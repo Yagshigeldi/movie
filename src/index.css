@@ -6,3 +6,21 @@
     --color-laylo: red;
     --color-bg-py: blue;
 }
+
+body {
+  background-color: #000;
+}
+
+.container,
+.container-hero {
+  max-width: 1212px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container-hero {
+  max-width: 1392px;
+}

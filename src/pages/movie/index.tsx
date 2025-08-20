@@ -45,7 +45,6 @@ const Movie = () => {
 
   return (
     <div className="Index">
-      <h2>Movie</h2>
       <div className="container mx-auto">
         <Select onChange={handleChange}
         className='w-40'
