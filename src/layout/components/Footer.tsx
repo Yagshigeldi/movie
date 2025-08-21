@@ -17,7 +17,7 @@ import youtube from "../../shared/assets/footer-images/youtube-line.svg";
 
 const Footer = () => {
   return (
-    <div className="container p-[30px] flex justify-between bg-[#111111] rounded-[12px] mx-auto mt-[118px] mb-[40px] text-[#A1A1A1]">
+    <div className="container p-[30px] flex justify-between bg-[#111111] rounded-[12px] mx-auto mt-[80px] mb-[40px] text-[#A1A1A1]">
       <div>
         <img src={footerEmblem} alt="" />
         <div className="mt-[48px]">

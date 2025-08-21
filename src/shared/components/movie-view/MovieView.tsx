@@ -19,14 +19,13 @@ const MovieView:FC<Props> = ({data}) => {
                             <img loading='lazy' src={`${IMAGE_URL}${movie.poster_path}`} alt={movie.title} />
                         </div>
                         <div className='p-3'>
-                            <h3 className='font-bold text-xl line-clamp-1' title={movie.title}>{movie.title}</h3>
-                            <p>⭐️{movie.vote_average}</p>
-                            <p>{movie.release_date}</p>
+                            <h3 className='font-bold text-xl line-clamp-1 text-gray-500' title={movie.title}>{movie.title}</h3>
+                            <p className='text-gray-500'>⭐️{movie.vote_average}</p>
+                            {/* <p className='text-gray-500'>{movie.release_date}</p> */}
                         </div>
                     </div>
             ))}
         </div>
-      <h2>MovieView</h2>
     </div>
   );
 };

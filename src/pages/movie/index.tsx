@@ -45,10 +45,10 @@ const Movie = () => {
 
   return (
     <div className="Index">
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-6 flex gap-5">
         <Select onChange={handleChange}
         className='w-40'
-        placeholder="Select genre"
+        placeholder ="Select genre"
         options={options}/>
         <Select onChange={handleChangePeriod} className='w-40' placeholder="Select period" options={PERIOD}/>
       </div>

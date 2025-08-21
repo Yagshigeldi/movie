@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 import "./style.css";
 
 // Swiper modules
-import { FreeMode, Pagination, Navigation, Autoplay, Mousewheel } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 interface Props {
   data: any;
@@ -26,16 +26,12 @@ const MovieViewHome: FC<Props> = ({ data }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto pb-10 mt-15">
+    <div className="container mx-auto pb-10 mt-10">
       <Swiper
         slidesPerView={4}
         spaceBetween={20}
-        freeMode={true}
-        pagination={{ clickable: true }}
         navigation={true}
-        modules={[FreeMode, Pagination, Navigation, Autoplay, Mousewheel]}
-        mousewheel={true}
-        autoplay={{delay:3000}}
+        modules={[Navigation]}
         className="mySwiper"
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
