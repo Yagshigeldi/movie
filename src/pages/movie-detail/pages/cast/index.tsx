@@ -9,10 +9,13 @@ const Cast = () => {
   const { data: creditsData } = getMovieItems(id || "", "credits");
   const [showCast, setShowCast] = useState(false);
   const navigate = useNavigate();
-
+  // console.log(showCast);
+  
   return (
     <div className="Index">
-      <div className={`flex flex-wrap justify-center gap-2 h-${showCast ? "auto" : "[255px]"} overflow-hidden`}>
+      {/* <div className={`flex flex-wrap justify-center gap-2 h-${showCast ? "auto" : "[255px]"} overflow-hidden`}> */}
+    <div className={`flex flex-wrap justify-center gap-2 overflow-hidden ${showCast ? "h-auto" : "h-[255px]"}`}>
+
         {creditsData?.cast
           ?.map((user: any) => {
             const image = user.profile_path
