@@ -40,7 +40,7 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to={"/like"}
+            to={"/saved"}
             className={({ isActive }) =>
               `flex flex-col gap-[2px] items-center ${
                 isActive ? "text-[#C61F1F]" : "text-[#A1A1A1]"
@@ -48,7 +48,7 @@ const Header = () => {
             }
           >
             <Heart />
-            <h2 className="text-[15px]">Like</h2>
+            <h2 className="text-[15px]">Saved</h2>
           </NavLink>
 
           <NavLink

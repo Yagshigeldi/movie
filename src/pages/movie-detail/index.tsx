@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import { NavLink, Outlet, useParams } from "react-router-dom";
 import { useMovieDetail } from "./services/useMovieDetail";
 import { IMAGE_URL } from "../../shared/const";
@@ -12,17 +12,19 @@ const MovieDetail = () => {
   const { data: imagesData } = getMovieItems(id || "", "images");
   const { data: similarData } = getMovieItems(id || "", "similar");
 
-  if (isLoading) {
-    return (
-      <div className="container mx-auto">
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
+
+  return (
+    <div className="container mx-auto">
+      {
+        isLoading && <div className="container mx-auto">
         <div className="w-full h-[500px] bg-gray-300 animate-pulse"></div>
         <div className="my-3 w-[60%] h-10 bg-gray-300 animate-pulse"></div>
         <div className="my-3 w-[30%] h-10 bg-gray-300 animate-pulse"></div>
       </div>
-    );
-  }
-  return (
-    <div className="container mx-auto">
+      }      
       <div>
         <img src={`${IMAGE_URL}${data?.backdrop_path}`} alt="" />
       </div>
